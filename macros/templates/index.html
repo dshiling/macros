@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div id="results">
+        <p>Showing all <u>{{ results|length }}</u> macros</p>
+    </div>
+    <div class="macro-wrapper">
+        <div class="copied"></div>
+        <div class="macro-grid">
+            {% for macro in results %}
+                {% include 'macro.html' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+version: '2'
+services:
+  macros:
+    build: .
+    restart: always
+    environment:
+      - SQLALCHEMY_DATABASE_URI=
+      - DEBUG=true
+      - AUTO_RELOAD=1
+      - OAUTHLIB_INSECURE_TRANSPORT=1
+    ports:
+      - "8080:8080"
+    links:
+      - postgres
+  postgres:
+    image: postgres:9.6
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=

@@ -1,0 +1,18 @@
+<div class="grid-item container" id="macro-{{ macro.id }}">
+    <div class="item-contents">
+        <h3 class="item-label">{{ macro.title }}</h3>
+        <div class="btn-container">
+            <button class="copy-btn" title="Copy to Clipboard"
+                    data-clipboard-text="{{ macro.content }}">
+                <img class="clippy" src="{{ url_for('static', filename='img/clippy.svg') }}">
+            </button>
+        </div>
+        <div class="button-wrap">
+            <button class="item-button"></button>
+        </div>
+        <div class="item-description">
+            <p class="text">{{ macro.content }}</p>
+        </div>
+        <small class="item-date">Added on {{ macro.created_on | datetime_format() }}</small>
+    </div>
+</div>

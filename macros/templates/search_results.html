@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div id="results">
+        {% if query %}
+            <h4>Showing {{ results|length }} result(s) for <i> {{ query }} </i></h4>
+        {% endif %}
+    </div>
+    <div class="macro-wrapper">
+        <div class="copied"></div>
+        <div class="macro-grid">
+            {% for macro in results %}
+                {% include 'macro.html' %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,4 @@
+TESTING: true
+DEBUG: false
+SESSION_TYPE: null
+SERVER_NAME: test.testing

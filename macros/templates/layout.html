@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+        <title>Macros</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="hero-section">
+                    <a href="{{ url_for('index') }}">
+                        <img id="logo" src="{{ url_for('static', filename='img/sqsp-logo-white.png') }}">
+                    </a>
+                    <div class="avatar">
+                        <img class="avatar-image" src={{ picture }}>
+                        <small class="avatar-message"> {{ message }} </small>
+                    </div>
+                    <div class="hero-content">
+                        <h1>T&S Macros</h1>
+                        <div id="search-bar">
+                            <form method="POST" action="{{ url_for('search') }}">
+                                <input class="input" type="text" name="search" placeholder="Search...">
+                                <button class="submit" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+            <footer>
+                <div class="pre-footer">
+                </div>
+                <div id="footer-content">
+                    <a href="">Bugs/Issues/Comments</a> - <a
+                        href="/">Add New Macro</a> - <a href="">Request
+                    Access</a>
+                </div>
+                <br>
+                <div class="attribution">
+                    <small>Property of <a href="">Me</a> // Made by
+                        <a href="">dshiling</a></small>
+                </div>
+            </footer>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    </body>
+</html>

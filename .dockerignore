@@ -1,0 +1,10 @@
+**/*.log
+**/.py[cod]
+**/__pycache__
+.git
+.gitignore
+.idea/
+.tox
+.venv
+Makefile
+reports/

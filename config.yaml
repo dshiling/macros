@@ -1,0 +1,16 @@
+BLUEPRINTS:
+  # [blueprint_name, url_prefix]
+
+EXTENSIONS: ['', '']
+
+SQLALCHEMY_TRACK_MODIFICATIONS: false
+SQLALCHEMY_DATABASE_URI: postgresql://localhost/macros
+
+# OAuth Configuration
+GOOGLE_OAUTH_CLIENT_ID: client_id
+GOOGLE_OAUTH_CLIENT_SECRET: client_secret
+GOOGLE_OAUTH_SCOPES: ['email', 'profile', 'https://www.googleapis.com/auth/macros.readonly']
+
+## Logging
+DEBUG: false
+
