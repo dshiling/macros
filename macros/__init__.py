@@ -2,7 +2,7 @@
 macros
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Python app for finding and tracking common T&S macros
+Python app for finding and tracking common macros
 """
 import os
 from flask import Flask
