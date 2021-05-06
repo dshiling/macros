@@ -1,6 +1,6 @@
 colorlog==2.6.1
 pylint==1.7.4
-Flask-Cors==3.0.3
+Flask-Cors==3.0.9
 flask-stats==0.1.0
 uwsgi==2.0.14
 luigi==2.7.0
